@@ -54,3 +54,5 @@ $ nvim nightfox
 $ nvim starry.lua
 $ nvim rasmus.lua
 $ nvim matieral.lua
+$ echo $f
+! echo $f
