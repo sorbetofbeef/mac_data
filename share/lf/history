@@ -1,0 +1,56 @@
+: q
+: extract 
+$ touch hi
+: on-cd
+: on-cd
+: on-cd
+: mkdir FiraGO
+% fc-cache -frb
+% fc-cache -frv
+$ nvim languages.toml
+$ hx
+: wqa
+$ nvim index.norf
+$ nvim notes.norg
+: extract 
+: extract 
+: mkdir archive
+: extract 
+: link -o 
+: extract 
+: delete 
+$ mpv $f
+$ mpv $f
+: extract 
+: link -o 
+: delete
+: delete
+: mkdir flutter_dart
+$ nvim 
+$ nvim lscolors.sh
+: wqa
+! open -a Docker.app
+: open -a Docker
+! open -a Docker
+! open -a Docker.app
+: ?
+: h
+: help
+: doc
+: wqa
+! git pull origin
+! git pull upstream
+! git pull upstream master
+! git pull
+: link -o 
+: link -o 
+: link -o 
+: link -o 
+: link -o 
+% gh repo clone atlas-engineer/ports
+$ nvim expense_planner.norg
+$ sudo rm -rf $f
+$ nvim nightfox
+$ nvim starry.lua
+$ nvim rasmus.lua
+$ nvim matieral.lua
