@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-exec alacritty msg create-window "$@" || exec alacritty "$@"
+exec open -na Alacritty --args msg create-window "$@" || exec open -na Alacritty "$@"

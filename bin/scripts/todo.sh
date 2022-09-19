@@ -95,26 +95,44 @@ create () {
   _priority_input () {
     prio=
     flags=(' ' ' ' ' ' ' ')
-    
-    while [ "$ret_val" -eq 1 ]; do
+    while [[ $ret_val -eq 1 ]]; do
       printf '\nPriority[1-(4)]: ' ; read -r prio
-      if [[ -z $prio ]]; then
-        ret_val="$?"
-        prio=4
-        flag_id=3
-        return 0
-      else
-        if (check_digit "$prio" && [[ $prio -lt 4 ]]) ; then
-          ret_val="$?"
-          flag_id=$((prio - 1))
-          return 0
-        else
-          printf ' \e[1;31m!\e[0m \e[1;31;3mInvalid Input\e[0m \e[1;31m!\e[0m'
-          return 1
-        fi
-      fi
+    	case "$prio" in
+    	 '1') flag_id=0; ret_val=0
+    	 ;;
+    	 '2') flag_id=1; ret_val=0
+    	 ;;
+    	 '3') flag_id=2; ret_val=0
+    	 ;;
+    	 '4') flag_id=3; ret_val=0
+    	 ;;
+    	 '') flag_id=3; prio='4'; ret_val=0
+    	 ;;
+    	 *) ret_val=1
+    	 ;;
+    	esac
     done
-    unset retval
+    unset ret_val
+    
+    # while [ "$ret_val" -eq 1 ]; do
+    #   printf '\nPriority[1-(4)]: ' ; read -r prio
+    #   if [[ -z $prio ]]; then
+    #     ret_val="$?"
+    #     prio=4
+    #     flag_id=3
+    #     return 0
+    #   else
+    #     if (check_digit "$prio" && [[ $prio -lt 4 ]]) ; then
+    #       ret_val="$?"
+    #       flag_id=$((prio - 1))
+    #       return 0
+    #     else
+    #       printf ' \e[1;31m!\e[0m \e[1;31;3mInvalid Input\e[0m \e[1;31m!\e[0m'
+    #       return 1
+    #     fi
+    #   fi
+    # done
+    # unset retval
   }
 
   _due_date_input () {

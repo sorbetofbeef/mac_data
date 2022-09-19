@@ -33,3 +33,7 @@ src/
 state/
 var/
 share/fonts.*
+
+share/flutter.bak
+share/lf
+share/tridactyl

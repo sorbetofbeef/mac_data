@@ -10,7 +10,7 @@ build_kernel(){
 install_kernel() {
 	cp -v arch/x86/boot/bzImage /boot/vmlinuz-lfs
 	cp -v System.map /boot/System.map
-	cp -v .config /root/config_$(date '+%m.%d.%Y_%H%M')
+	cp -v .config /root/config_"$(date '+%m.%d.%Y_%H%M')"
 }
 
 main() {

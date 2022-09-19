@@ -1,1 +1,3 @@
-printf '%s\n' $(pbpaste) | dmenu-mac | xargs -o /Applications/MacPorts/WezTerm.app/Contents/MacOS/wezterm-gui start -- yt-dlp
+#!/usr/bin/env bash
+
+pbpaste | xargs -o yt-dlp
