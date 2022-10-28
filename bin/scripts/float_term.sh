@@ -8,13 +8,13 @@ main ()
   mode=$1
 
   case $mode in
-    f ) exec open -na kitty --args --single-instance --instance-group "Float" --title "PopUp"  -d ~ zsh -c 'lf'
+    f ) exec open -na kitty --args --single-instance --instance-group "Float" --title "PopUp"  -d ~
       ;;
-    m ) exec open -na kitty --args --single-instance --instance-group "Float" --title "Mail"  -d ~ zsh -c 'neomutt'
+    m ) exec open -na kitty --args --single-instance --instance-group "Float" --title "Mail"  -d ~ neomutt
       ;;
-    t ) exec open -na kitty --args --single-instance --instance-group "General" -d ~ zsh -c 'lf'
+    t ) exec open -na kitty --args --single-instance --instance-group "General" -d ~ 
      ;;
-    e ) exec open -na kitty.app --args --single-instance --instance-group "IDE" --title "Development"  nvim +cd ~/Projects
+    e ) exec open -na kitty.app --args --single-instance --instance-group "IDE" --title "Development" --session "$HOME/.config/kitty/sessions/ide.conf"
      ;;
     l ) exec open -na kitty.app --args --single-instance --instance-group "Float" --title "Launcher" ~/Projects/sk-launcher 
      ;;

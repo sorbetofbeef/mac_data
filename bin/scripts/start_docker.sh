@@ -8,8 +8,9 @@ _open_docker ()
   if [ -n "${DOCKER_PIDS[1]}" ]; then
     return 0
   else
-    if ! open -a Docker ; then
-      return 1
+    if open -a Docker ; then
+      wait "$!"
+      return 0
     else
       return 0
     fi
@@ -21,6 +22,7 @@ main ()
 {
   _open_docker
   wait "$!"
+  sleep 60
   exec lazydocker
 }
 
