@@ -35,8 +35,8 @@ var/
 share/fonts.*
 
 share/flutter.bak
-share/lf
 share/tridactyl
 bin/marksman
 bin/change_theme
 bin/dark_mode
+share/lf/tags

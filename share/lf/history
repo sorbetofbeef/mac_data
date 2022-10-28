@@ -44,3 +44,29 @@ $ nvim dark_mode.sh
 : wqa
 : q
 : mkdir images
+& source ~/.config/zsh/.zshrc
+$ . ~/.zshenv
+$ soure ~/.zshenv
+$ source ~/.zshemv
+$ source ~/.zshenv
+% source ~/.config/zsh/.zshrc
+: link -o 
+$ nvim types.norg
+$ nvim aquarium_dark.conf
+: wqa
+: mkdir ornos_glassware
+$ nvim change_theme.sh
+: wqa
+: mkdir portfolio_db
+: 2
+: q
+: wqa
+: mkdir fonts
+$ glow
+$ glow README.md 
+! glow README.md 
+: mkdir neovim
+: mkdir neovim-src
+: doc
+: link -o 
+% gh repo clone mschwarzmueller/nextjs-course-code
